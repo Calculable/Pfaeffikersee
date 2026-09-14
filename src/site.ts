@@ -1,8 +1,8 @@
 export const site = {
   url: "https://www.pfäffikersee.org",
   name: "pfäffikersee.org",
-  // Erst nach Freigabe und beim Domainumzug einschalten.
-  indexable: false,
+  // Öffentlich freigegeben beim Domainumzug.
+  indexable: true,
   goatcounter: "https://pfaeffikersee.goatcounter.com/count",
   basin: "https://usebasin.com/f/ff509d632e80",
 };

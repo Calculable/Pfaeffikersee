@@ -31,7 +31,7 @@ const image = page.image || page.socialImage;
   <main id="inhalt" class:list={[page.path === '/' && 'home']}>
    <header class:list={['page-header',image && 'with-image']}>
     {image && <img class="hero-image" src={image} alt="" fetchpriority="high" />}
-    <div class="heading-inner"><p class="eyebrow">Natur · Geschichte · Entdecken</p><h1>{page.heading}</h1>{page.subtitle && <p class="subtitle">{page.subtitle}</p>}</div>
+    <div class="heading-inner"><h1>{page.heading}</h1>{page.subtitle && <p class="subtitle">{page.subtitle}</p>}</div>
    </header>
    <slot />
   </main>

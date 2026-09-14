@@ -77,3 +77,7 @@
 - [ ] GitHub Pages Deployment einrichten, Custom Domain setzen, korrekte IDNA/Punycode-Schreibweise verwenden.
 - [ ] Beim Domainumzug Indexierung und GoatCounter aktivieren, Build erneut prüfen.
 - [ ] Apex und www, HTTPS, Canonical-URLs, alle zehn Routen, robots.txt und Sitemap auf der öffentlichen Domain prüfen.
+
+## Veröffentlichung freigegeben
+- Nutzer hat am 14. September 2026 Push, Veröffentlichung, Domainumzug, Suchmaschinenfreigabe und Portfolio-Verlinkung ausdrücklich beauftragt.
+- Indexierung und Sitemap aktiviert; GitHub-Pages-Deployment bei Push auf main eingerichtet.

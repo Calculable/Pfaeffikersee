@@ -184,13 +184,6 @@
 .with-image .heading-inner {
   margin: 0 auto;
 }
-.eyebrow {
-  text-transform: uppercase;
-  font-size: 0.73rem;
-  font-weight: 650;
-  letter-spacing: 0.2em;
-  margin: 0 0 1rem;
-}
 .subtitle {
   font-size: clamp(1.1rem, 2vw, 1.5rem);
   margin: 0.4rem 0;

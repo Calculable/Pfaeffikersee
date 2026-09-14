@@ -44,7 +44,7 @@ _Aufnahme: [Peter Berger](<https://de.wikipedia.org/wiki/Seegfrörni#/media/Date
 
 Auch im Jahr 2002 wurden die Wasserkraftwerke zugunsten eines stabilen Wasserspiegels ausgeschaltet. Auch damals Berichtete die Tagesschau von der anstehenden Freigabe der Seeoberfläche. ([Link zum Video](<https://www.srf.ch/play/tv/schweiz-aktuell/video/seegfroerni?urn=urn%3Asrf%3Avideo%3Aa6da0689-bc2a-401b-9006-fa5cf8b1f554>))
 
-Nach dem Besucheransturm hat die [Vereinigung ProPfäffikersee](<https://www.propfäffikersee.ch/home.html>) eine Bilanz gezogen, wie sich der Menschenrummel auf die Natur auswirkt: ([Link zum Dokument](<http://bisher.propfäffikersee.ch/Brosch2002.pdf>))
+Nach dem Besucheransturm hat die [Vereinigung ProPfäffikersee](<https://propfaeffikersee.ch/>) eine Bilanz gezogen, wie sich der Menschenrummel auf die Natur auswirkt: ([Link zum Dokument](<http://bisher.propfäffikersee.ch/Brosch2002.pdf>))
 
 ## Frühere Seegfrörnis
 
