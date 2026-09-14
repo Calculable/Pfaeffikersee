@@ -89,3 +89,10 @@
 - Nameserver, MX, TXT und bestehender Squarespace-Verifizierungsrecord unverändert. DNS-Sicherung lokal unter `migration/source/dns-before-launch.json` (nicht im Repository).
 - GitHub bestätigt «DNS check successful». Alle zehn Seiten über HTTP mit Status 200 erreichbar; robots.txt erlaubt Crawling, Sitemap enthält die ursprünglichen zehn Routen. HTTPS-Zertifikat wird noch ausgestellt; abschliessende HTTPS-Prüfung offen.
 - Portfolio-Karte direkt auf `https://www.pfäffikersee.org/` verlinkt, Offline-Hinweis entfernt; Commit `ce5ed33` auf Portfolio-main veröffentlicht.
+
+### Abschlussprüfung / noch offen
+- Portfolio-Deployment `ce5ed33` und Pfäffikersee-Deployment `bdea66c`: erfolgreich.
+- Alle zehn öffentlichen Seiten: Status 200, korrekte Canonical-URLs und `index, follow`. Alle 106 eingebundenen lokalen Dateien erreichbar. Apex leitet mit unverändertem Pfad auf www weiter.
+- Alle drei autoritativen Hosttech-Nameserver sowie öffentliche Resolver 1.1.1.1 und 8.8.8.8 liefern die neuen Records. Keine störenden Apex-AAAA- oder CAA-Records.
+- HTTPS noch nicht bereit: Zertifikatsprüfung liefert einen Hostname-Mismatch; niemals umgehen. GitHub zeigt trotz erfolgreicher DNS-Prüfung «Enforce HTTPS» deaktiviert. Custom Domain einmal entfernt und sofort wieder als `www.xn--pfffikersee-m8a.org` gespeichert, um die Zertifikatsausstellung gemäss GitHub-Dokumentation neu anzustossen.
+- Nächster Schritt: nach Zertifikatsausstellung in https://github.com/Calculable/Pfaeffikersee/settings/pages «Enforce HTTPS» aktivieren; HTTPS für Apex und www sowie Weiterleitung mit Unterseitenpfad prüfen. GitHub nennt bis zu einer Stunde: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/troubleshooting-custom-domains-and-github-pages#https-errors .
