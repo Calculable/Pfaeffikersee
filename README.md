@@ -52,9 +52,9 @@ Für Karten und Videos bleiben kleine HTML-Platzhalter im Markdown. Die eigentli
 
 `migration/assets.json` ordnet die ursprünglichen Bild-URLs den lokalen Dateien zu. `migration/source/` enthält das lokale Quellenarchiv und wird **nicht** auf GitHub hochgeladen. Die einmaligen Import-Skripte dürfen nicht über bearbeitete Markdown-Inhalte ausgeführt werden.
 
-Der Branch `migration/squarespace` enthält die neue Website. GitHub Actions prüft nur den Build; es veröffentlicht keine Website.
+Die Website wird unter https://www.pfäffikersee.org veröffentlicht. Änderungen auf `main` werden durch GitHub Actions gebaut und automatisch auf GitHub Pages bereitgestellt. Für Änderungen einen Arbeitsbranch verwenden, lokal prüfen und danach in `main` zusammenführen.
 
-**Domain und DNS erst nach ausdrücklicher Freigabe ändern.** Bis dahin bleibt `indexable: false`. Beim freigegebenen Domainumzug wird die GitHub-Pages-Veröffentlichung eingerichtet und dieser Wert aktiviert. Damit werden die Indexierungsfreigabe, die öffentliche Sitemap und GoatCounter eingeschaltet. Die 404-Seite bleibt immer von Suchmaschinen ausgeschlossen.
+`indexable: true` in `src/site.ts` aktiviert Suchmaschinenfreigabe, öffentliche Sitemap und GoatCounter. Die 404-Seite bleibt von Suchmaschinen ausgeschlossen. Domain und Mail-Einstellungen werden weiterhin bei Hosttech verwaltet.
 
 Basin: https://usebasin.com/app/forms/75327/form_setup (gemeinsam mit Portfolio; Kennzeichnung durch `site_source` und `form_source`)
 

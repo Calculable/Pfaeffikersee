@@ -33,7 +33,7 @@
 - [x] Lokale Vorschau zur Nutzerfreigabe
 - [ ] Domainumzug NUR nach Freigabe; DNS/Mail sichern, HTTPS und URLs prüfen
 
-## Stand am 14. September 2026
+## Stand vor der Veröffentlichung am 14. September 2026
 - Repository: https://github.com/Calculable/Pfaeffikersee
 - Arbeitsbranch: `migration/squarespace`; `main` enthält zunächst den Migrationsplan.
 - Lokale Vorschau: http://127.0.0.1:4340/ (Astro dev server).
@@ -70,14 +70,22 @@
 - Vier ungültige Quellen-URLs schon im Original erkannt und korrigiert (Markdown fälschlich im Linkziel bzw. Bildcredit anstelle einer Lizenz-URL).
 - Mobile Navigation öffnen/schliessen, Bilddialog öffnen/schliessen, Karte nach Klick und aktualisierten YouTube-Player geprüft. Keine horizontale Überbreite auf den geprüften Mobilseiten.
 
-## Vor Domainumzug zwingend
-- [ ] Nutzer bestätigt lokale Vorschau und gibt Domainumzug ausdrücklich frei.
+## Checkliste für den Domainumzug
+- [x] Nutzer bestätigt lokale Vorschau und gibt Domainumzug ausdrücklich frei.
 - [ ] Basin- und GoatCounter-E-Mail-Verifizierung abgeschlossen; Kontaktformular-Zustellung mit Nutzer getestet; Basin-Tarif nach Testphase geklärt.
-- [ ] Bestehende DNS-Einträge bei Hosttech sichern; Mail/MX/TXT unverändert lassen.
-- [ ] GitHub Pages Deployment einrichten, Custom Domain setzen, korrekte IDNA/Punycode-Schreibweise verwenden.
-- [ ] Beim Domainumzug Indexierung und GoatCounter aktivieren, Build erneut prüfen.
+- [x] Bestehende DNS-Einträge bei Hosttech sichern; Mail/MX/TXT unverändert lassen.
+- [x] GitHub Pages Deployment einrichten, Custom Domain setzen, korrekte IDNA/Punycode-Schreibweise verwenden.
+- [x] Beim Domainumzug Indexierung und GoatCounter aktivieren, Build erneut prüfen.
 - [ ] Apex und www, HTTPS, Canonical-URLs, alle zehn Routen, robots.txt und Sitemap auf der öffentlichen Domain prüfen.
 
 ## Veröffentlichung freigegeben
 - Nutzer hat am 14. September 2026 Push, Veröffentlichung, Domainumzug, Suchmaschinenfreigabe und Portfolio-Verlinkung ausdrücklich beauftragt.
 - Indexierung und Sitemap aktiviert; GitHub-Pages-Deployment bei Push auf main eingerichtet.
+
+## Domainumzug am 14. September 2026
+- Migration in `main` zusammengeführt und veröffentlicht; GitHub-Pages-Workflow erfolgreich.
+- Custom Domain: `www.xn--pfffikersee-m8a.org` (www.pfäffikersee.org), bei GitHub vor der DNS-Umstellung hinterlegt.
+- Hosttech: vier Apex-A-Records auf `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` gesetzt; www-CNAME auf `calculable.github.io`. TTL der fünf geänderten Records: 3600 Sekunden.
+- Nameserver, MX, TXT und bestehender Squarespace-Verifizierungsrecord unverändert. DNS-Sicherung lokal unter `migration/source/dns-before-launch.json` (nicht im Repository).
+- GitHub bestätigt «DNS check successful». Alle zehn Seiten über HTTP mit Status 200 erreichbar; robots.txt erlaubt Crawling, Sitemap enthält die ursprünglichen zehn Routen. HTTPS-Zertifikat wird noch ausgestellt; abschliessende HTTPS-Prüfung offen.
+- Portfolio-Karte direkt auf `https://www.pfäffikersee.org/` verlinkt, Offline-Hinweis entfernt; Commit `ce5ed33` auf Portfolio-main veröffentlicht.
