@@ -6,3 +6,8 @@ migration/source/
 .env
 __pycache__/
 *.pyc
+
+# Local migration records and provenance (not part of the repository).
+/MIGRATION.md
+/DOMAIN-MOVE.md
+/migration/
