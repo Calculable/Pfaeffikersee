@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Wissen Sie, wie der Kanton Zürich die Ausbreitung fremder Tiere und Pflanzen am Pfäffikersee bekämpft?",
+    "text": "Der Pfäffikersee bietet Lebensraum für unterschiedlichste Tierarten im Wasser und im Uferbereich. Es wird sogar spekuliert, ob sich bald auch Biber am Pfäffikersee niederlassen werden. Hier erfahren Sie mehr über die Tiere im und um den See und wie der Kanton diese mit Schutzmassnahmen vor der Verdrängung schützt.",
+    "image": "/media/4788d60ea4-img_2010.jpg",
+    "url": "/biodiversitaet",
+    "linkLabel": "Mehr über die Biodiversität erfahren"
+  },
+  {
+    "title": "Wissen Sie, weshalb das Robenhauser Ried international für Schlagzeilen gesorgt hat?",
+    "text": "Über Jahrtausende haben Menschen das Gebiet rund um den Pfäffikersee bewohnt. Dank der feuchten Umgebung sind zahlreiche Fundgegenstände aus früheren Zeiten noch in sehr gutem Zustand und es werden immer wieder spannende Entdeckungen gemacht. Bekannt sind vor allem die Funde aus den 6000 Jahre alten Pfahlbausiedlungen, unter anderem die berühmte Türe von Robenhausen.",
+    "image": "/media/df59adeba3-zh_steinzeit11002-1.gif",
+    "url": "/geschichte",
+    "linkLabel": "Mehr über die Geschichte erfahren"
+  },
+  {
+    "title": "Wissen Sie, dass Sie den Pfäffikersee live von Zuhause aus beobachten können?",
+    "text": "Der Seerettungsdienst stellt eine hochauflösende Webcam mit Liveaufnahmen des Sees zur Verfügung. Auf dieser Seite finden Sie auch eine Fotogalerie mit Bildern vom Pfäffikersee.",
+    "image": "/media/91c407018a-bildschirmfoto-2020-12-03-um-20.15.23-kopie.png",
+    "url": "/galerie",
+    "linkLabel": "Webcam und Galerie öffnen"
+  },
+  {
+    "title": "Wissen Sie, dass die Wasserkraftwerke auf ihre Einnahmen verzichtet haben, um eine Seegfrörni zu ermöglichen?",
+    "text": "Alle paar Jahre erscheint der Pfäffikersee mit einem kurzen Bericht in der Tagesschau - jeweils im Winter, wenn der See gefriert und die Eisfläche für die Besucher freigegeben wird. Bei einer Seegfrörni wie zuletzt im Jahr 2012 kommen jeweils tausende Menschen an den Pfäffikersee.",
+    "image": "/media/292f53d4bb-img_4434_1.jpg",
+    "url": "/seegfroerni",
+    "linkLabel": "Mehr über die Seegfrörni erfahren"
+  },
+  {
+    "title": "Kennen Sie die Sehenswürdigkeiten rund um den Pfäffikersee?",
+    "text": "Der rund 9 Kilometer lange Uferweg bietet viele Höhepunkte für Familien, Sportlerinnen und Sportler sowie Naturinteressierte.",
+    "image": "/media/ad7c022100-img_2158.jpg",
+    "url": "/sehenswuerdigkeiten",
+    "linkLabel": "Mehr über die Sehenswürdigkeiten erfahren"
+  },
+  {
+    "title": "Wissen Sie, dass sich die Wasserqualität in den letzten Jahren stark verbessert hat?",
+    "text": "Der Pfäffikersee kämpft seit langem mit Problemen, da zu viele Düngemittel in das Wasser gelangt sind. Dies hat den Pflanzen und Tieren stark geschadet. Dank diverser Massnahmen konnte die Wasserqualität wieder stark verbessert werden. Doch auch heute gibt es historisch bedingt zu wenig Sauerstoff unter der Wasseroberfläche.",
+    "image": "/media/5bad33a132-img_2436.jpg",
+    "url": "/wasserqualitaet",
+    "linkLabel": "Mehr über die Wasserqualität erfahren"
+  },
+  {
+    "title": "Wissen Sie, dass es am Pfäffikersee über 200 verschiedene Vogelarten gibt?",
+    "text": "Der See ist ein Wasservogelgebiet von nationaler Bedeutung und bietet Lebensraum für einige besonders gefährdete Vogelarten. Zahlreiche Beobachter erfassen jedes Jahr den Bestand der Tiere.",
+    "image": "/media/d2ce29f512-jan-huber-6w51xl6kjoy-unsplash.jpg",
+    "url": "/voegel",
+    "linkLabel": "Mehr über die Vogelwelt erfahren"
+  }
+]

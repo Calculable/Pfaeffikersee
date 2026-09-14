@@ -1,0 +1,23 @@
+<dialog class="lightbox" aria-label="Bildansicht"><button class="close-image" aria-label="Bildansicht schliessen">Schliessen ×</button><img alt="" /></dialog>
+<script>
+ const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+ const nav = document.querySelector('nav#navigation');
+ toggle?.addEventListener('click', () => {
+  const expanded = toggle.getAttribute('aria-expanded') !== 'true';
+  toggle.setAttribute('aria-expanded', String(expanded)); nav?.classList.toggle('is-open',expanded);
+ });
+ document.addEventListener('keydown',event=>{if(event.key==='Escape' && toggle?.getAttribute('aria-expanded')==='true'){toggle.setAttribute('aria-expanded','false');nav?.classList.remove('is-open');toggle.focus();}});
+ document.querySelectorAll<HTMLElement>('.external-embed').forEach(box=>{
+  box.querySelector('button')?.addEventListener('click',()=>{
+   const frame=document.createElement('iframe');frame.src=box.dataset.src!;frame.title=box.dataset.title!;frame.allow='fullscreen; picture-in-picture';frame.allowFullscreen=true;
+   box.replaceChildren(frame);box.classList.add('is-loaded');
+  });
+ });
+ const dialog=document.querySelector<HTMLDialogElement>('.lightbox');
+ document.querySelectorAll<HTMLAnchorElement>('.image-grid a[href^="/media/"]').forEach(link=>link.addEventListener('click',event=>{
+  if(event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+  event.preventDefault();const img=dialog!.querySelector('img')!;img.src=link.href;img.alt=link.querySelector('img')?.alt||'Pfäffikersee';dialog!.showModal();
+ }));
+ dialog?.querySelector('button')?.addEventListener('click',()=>dialog.close());
+ dialog?.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
+</script>

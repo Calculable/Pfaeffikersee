@@ -1,0 +1,41 @@
+---
+import '../styles/site.css';
+import { site, navigation } from '../site';
+import Interactions from '../components/Interactions.astro';
+const { page } = Astro.props;
+const canonical = new URL(page.path, site.url).href;
+const image = page.image || page.socialImage;
+---
+<!doctype html>
+<html lang="de-CH">
+ <head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{page.title}</title>
+  {page.description && <meta name="description" content={page.description} />}
+  <meta name="robots" content={site.indexable && page.path !== '/404' ? 'index, follow' : 'noindex, nofollow'} />
+  <link rel="canonical" href={canonical} />
+  <meta property="og:site_name" content={site.name} /><meta property="og:type" content="website" />
+  <meta property="og:title" content={page.title} /><meta property="og:url" content={canonical} />
+  {page.description && <meta property="og:description" content={page.description} />}
+  {image && <meta property="og:image" content={new URL(image,site.url).href} />}
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  {site.indexable && site.goatcounter && <script is:inline data-goatcounter={site.goatcounter} async src="https://gc.zgo.at/count.js"></script>}
+ </head>
+ <body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt</a>
+  <header class="site-header">
+   <a class="brand" href="/" aria-label="pfäffikersee.org – Startseite"><span class="brand-mark" aria-hidden="true">≈</span> pfäffikersee.org</a>
+   <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menü <span aria-hidden="true">☰</span></button>
+   <nav id="navigation" aria-label="Hauptnavigation">{navigation.map(([label,url]) => <a href={url} aria-current={page.path === url ? 'page' : undefined}>{label}</a>)}</nav>
+  </header>
+  <main id="inhalt" class:list={[page.path === '/' && 'home']}>
+   <header class:list={['page-header',image && 'with-image']}>
+    {image && <img class="hero-image" src={image} alt="" fetchpriority="high" />}
+    <div class="heading-inner"><p class="eyebrow">Natur · Geschichte · Entdecken</p><h1>{page.heading}</h1>{page.subtitle && <p class="subtitle">{page.subtitle}</p>}</div>
+   </header>
+   <slot />
+  </main>
+  <footer class="site-footer"><a class="brand" href="/">pfäffikersee.org</a><p>Haben Sie Fragen oder Anregungen? <a href="/kontakt">Nehmen Sie Kontakt auf.</a></p><div><a href="/datenschutzerklaerung">Datenschutzerklärung</a><span>Diese Seite wurde erstellt von <a href="https://www.jan-huber.ch">Jan Huber (jan-huber.ch)</a>.</span></div></footer>
+  <Interactions />
+ </body>
+</html>

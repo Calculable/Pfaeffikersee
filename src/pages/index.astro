@@ -1,0 +1,11 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import * as home from '../content/pages/home/index.md';
+import Links from '../content/pages/home/links.md';
+import projects from '../content/projects.json';
+---
+<PageLayout page={home.frontmatter}>
+ <article class="prose home-intro"><home.Content /></article>
+ <section class="topics" aria-label="Den Pfäffikersee entdecken">{projects.map(project => <article class="topic"><a href={project.url} class="topic-image" tabindex="-1" aria-hidden="true"><img src={project.image} alt="" loading="lazy" /></a><div class="topic-body"><h2><a href={project.url}>{project.title}</a></h2><p>{project.text}</p><a class="topic-link" href={project.url}>{project.linkLabel}<span aria-hidden="true"> ↗</span></a></div></article>)}</section>
+ <aside class="prose further-links"><Links /></aside>
+</PageLayout>

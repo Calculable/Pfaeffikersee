@@ -1,0 +1,14 @@
+---
+import {site} from '../site';
+---
+<form class="contact-form" action={site.basin || undefined} method="POST">
+ <input type="hidden" name="form_source" value="Pfäffikersee – Kontakt" />
+ <input type="hidden" name="site_source" value="pfaeffikersee.org" />
+ <label>Name <input name="name" autocomplete="name" required maxlength="200" /></label>
+ <label>E-Mail <input name="email" type="email" autocomplete="email" required maxlength="300" /></label>
+ <label>Nachricht <textarea name="message" rows="7" required maxlength="10000"></textarea></label>
+ <div class="honeypot" aria-hidden="true"><label>Bitte leer lassen<input name="_gotcha" tabindex="-1" autocomplete="off" /></label></div>
+ <p class="form-note">Ihre Angaben werden zur Bearbeitung Ihrer Anfrage über Basin übermittelt. <a href="/datenschutzerklaerung">Datenschutzerklärung</a></p>
+ <button type="submit" disabled={!site.basin}>Absenden</button>
+ {!site.basin && <p>Das Kontaktformular wird für die Veröffentlichung eingerichtet.</p>}
+</form>

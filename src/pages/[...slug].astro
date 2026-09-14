@@ -1,0 +1,10 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import ContactForm from '../components/ContactForm.astro';
+export function getStaticPaths() {
+ const pages = import.meta.glob('../content/pages/**/index.md', {eager:true});
+ return Object.values(pages).filter(page => page.frontmatter.path !== '/').map(page => ({params:{slug:page.frontmatter.path.slice(1)},props:{page}}));
+}
+const {page} = Astro.props;
+---
+<PageLayout page={page.frontmatter}><article class="prose"><page.Content />{page.frontmatter.path === '/kontakt' && <ContactForm />}</article></PageLayout>
